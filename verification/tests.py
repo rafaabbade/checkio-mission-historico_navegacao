@@ -10,6 +10,15 @@ Each test is a dict with
 
 TESTS = {
     "Basics": [
-        {{TESTES}}
+        [
+    {
+        "input": [["visitar www.google.com", "visitar www.facebook.com", "voltar", "avançar"]],
+        "answer": "www.facebook.com"
+    },
+    {
+        "input": [["visitar www.site1.com", "voltar"]],
+        "answer": "Nenhuma página visitada"
+    }
+]
     ]
 }

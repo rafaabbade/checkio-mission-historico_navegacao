@@ -1,1 +1,12 @@
-{{CODIGO INICIAL}}
+def historico_navegacao(comandos):
+    # Seu código aqui
+    return None
+
+print("Example:")
+print(historico_navegacao(["visitar www.google.com", "visitar www.facebook.com", "voltar", "avançar"]))
+
+# As funções assert são utilizadas para verificar se o resultado da função chamada é o esperado
+assert historico_navegacao(["visitar www.google.com", "visitar www.facebook.com", "voltar", "avançar"]) == "www.facebook.com"
+assert historico_navegacao(["visitar www.site1.com", "voltar"]) == "Nenhuma página visitada"
+
+print("Seu código passou pelos testes, clique em Check para avançar!")

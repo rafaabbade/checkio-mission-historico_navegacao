@@ -2,60 +2,80 @@
  <div class="question-answer">
   <div class="question">
    <p>
-    {{DUVIDA 1}}
+    Como armazenar as páginas visitadas?
    </p>
   </div>
   <div class="answer">
    <p>
-    {{DICA 1}}
+    Usaremos duas pilhas (historico e futuras) para armazenar as páginas visitadas e para gerenciar a navegação de "voltar" e "avançar". A pilha historico armazena as páginas visitadas no passado, enquanto a pilha futuras armazena as páginas que foram visitadas antes do comando "voltar", permitindo retornar a essas páginas com o comando "avançar".
    </p>
   </div>
  </div>
  <div class="question-answer">
   <div class="question">
    <p>
-    {{DUVIDA 2}}
+    Como implementar o comando "voltar"?
    </p>
   </div>
   <div class="answer">
    <p>
-    {{DICA 2}}
+    Para implementar o comando "voltar", você precisa desempilhar a URL do topo da pilha de navegação atual e empilhar na pilha de páginas futuras (futuras). Exemplo:
+
+<pre class="brush: python">
+futuras = []
+if historico:
+    futuras.append(atual)
+    atual = historico.pop()
+</pre>
    </p>
   </div>
  </div>
  <div class="question-answer">
   <div class="question">
    <p>
-    {{DUVIDA 3}}
+    Como implementar o comando "avançar"?
    </p>
   </div>
   <div class="answer">
    <p>
-    {{DICA 3}}
+    Para implementar o comando "avançar", você precisa desempilhar a URL do topo da pilha de páginas futuras e empilhar novamente na pilha de navegação atual. Exemplo:
+
+<pre class="brush: python">
+if futuras:
+    historico.append(atual)
+    atual = futuras.pop()
+</pre>
    </p>
   </div>
  </div>
  <div class="question-answer">
   <div class="question">
    <p>
-    {{DUVIDA 4}}
+    Como iniciar a navegação?
    </p>
   </div>
   <div class="answer">
    <p>
-    {{DICA 4}}
+    Inicie a navegação com a URL atual definida como "Nenhuma página visitada" e as pilhas (historico e futuras) vazias. Quando um comando de visita for executado, atualize a URL atual e limpe a pilha de páginas futuras.
    </p>
   </div>
  </div>
  <div class="question-answer">
   <div class="question">
    <p>
-    {{DUVIDA 5}}
+    Como entender e separar os comandos?
    </p>
   </div>
   <div class="answer">
    <p>
-    {{DICA 5}}
+    Para entender e separar os comandos, você pode usar a função split() em cada comando. Por exemplo, para separar o comando "visitar www.google.com" e extrair a URL, use o seguinte código:
+
+<pre class="brush: python">
+comando = "visitar www.google.com"
+partes = comando.split()
+acao = partes[0]  # 'visitar'
+url = partes[1]  # 'www.google.com'
+</pre>
    </p>
   </div>
  </div>

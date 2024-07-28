@@ -1,22 +1,26 @@
 <!-- Describe task in general -->
 <p>
-    {{TIPO}}
+    <strong>Prática:</strong> Reforce o conhecimento adquirido. Aplique as técnicas aprendidas e repita os exercícios até se sentir confiante.
 </p>
 <h4>Enunciado</h4>
 
 <p>
-    {{ENUNCIADO}}
+    História: Ana, uma desenvolvedora web, está criando um navegador e precisa implementar o recurso de "voltar" e "avançar" no histórico de navegação. Ela quer usar uma pilha para esta tarefa.
+Crie uma função que simule o histórico de navegação de um navegador. A função deve permitir adicionar páginas ao histórico, voltar para a página anterior e avançar para a próxima página.
+
+
 </p>
 
 
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Entrada: </strong> {{ENTRADA}}
+    <strong>Entrada: </strong> Uma lista de comandos, onde cada comando é uma string: "visitar <URL>", "voltar", "avançar".
 </p>
 
 <p>
-    <strong>Saída: </strong> {{SAIDA}}
+    <strong>Saída: </strong> A URL atual após a execução de todos os comandos.
+
 </p>
 
 
@@ -32,11 +36,14 @@ countConsecutiveSummers(99) == 6
 </pre>
 {% else %}
 <pre class="brush: python">
-    {{EXEMPLOS}}
+    historico_navegacao(["visitar www.google.com", "visitar www.facebook.com", "voltar", "avançar"]) >> "www.facebook.com"
 </pre>
 {% endif %}
 </div>
 <h4>Habilidades</h4>
 <ul>
-    {{HABILIDADES}}
+    <li>Pilhas</li>
+<li>Identificação de Padrões em Sequências</li>
+<li>Manipulação de Strings</li>
+<li>Controle de Fluxo e Iteração</li>
 </ul>
